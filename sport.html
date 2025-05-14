@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>رياضة</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  
+  <!-- خط جميل -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+
+<!-- شريط التنقل الكامل -->
+<nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand logo-text" href="index.html">El Moghit</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">منتجاتنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="nutrition.html">البرامج الغذائية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sport.html">رياضة</a>
+        </li>
+      </ul>
+      <button class="btn btn-primary ms-3 position-relative" onclick="window.location.href='cart.html'">
+        سلة التسوق 🛒
+        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none;">
+          0
+        </span>
+      </button>
+      
+          </div>
+  </div>
+</nav>
+<section class="section bg-dark text-white py-5" id="about" data-aos="fade-up">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                <img src="path-to-your-image.jpg" alt="صورتي" class="rounded-circle img-fluid mb-3" style="width: 180px; height: 180px; object-fit: cover;">
+                <h2 class="mb-3">مرحبًا بك في منصة <span class="text-primary">El Moghit</span></h2>
+                <p class="lead">أنا [اسمك]، مدرب محترف ومختص في الكوتشينج والتوجيه.</p>
+            </div>
+            <div class="col-lg-6 text-center text-lg-start">
+                <h4 class="mb-3">تواصل معنا</h4>
+                <div class="d-flex justify-content-center justify-content-lg-start mb-4">
+                    <a href="#" class="text-white me-3 fs-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white me-3 fs-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white me-3 fs-3"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white me-3 fs-3"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="text-white me-3 fs-3"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p class="lead mb-3">📞 رقم الهاتف: <strong>+213 6XX XXX XXX</strong></p>
+                <a href="#contact" class="btn btn-primary btn-lg">اتصل بنا</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body></html>

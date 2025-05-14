@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>سلة التسوق | El Moghit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("g6lRcUDT5ch5pvhu5"); // مفتاحك العام
+    })();
+  </script>
+
+  
+</head>
+
+<body>
+  <div class="marquee">
+    اختر المنتجات وأدخل معلوماتك الأساسية، سيتم التواصل معك عبر الوتساب والبريد الإلكتروني الخاص بك.
+  </div>
+
+  <div class="container my-5">
+    <h2 class="mb-4 text-center">🛒 سلة التسوق</h2>
+
+    <div id="cart-items" class="mb-4">
+      <!-- المنتجات تظهر هنا -->
+    </div>
+
+    <h4 class="text-end">الإجمالي: <span id="total-price">0</span> دج</h4>
+
+    <div class="text-end mb-3">
+      <button class="btn btn-danger" onclick="clearCart()">🗑️ مسح كل شيء</button>
+    </div>
+
+    <hr>
+
+    <h4 class="mb-3">معلوماتك الشخصية</h4>
+
+    <form id="order-form">
+      <input type="text" name="from_name" id="from_name" class="form-control mb-3" placeholder="الاسم الكامل" required>
+      <input type="text" name="address" id="address" class="form-control mb-3" placeholder="العنوان" required>
+      <input type="text" name="phone" id="phone" class="form-control mb-3" placeholder="رقم الهاتف" required>
+      <input type="email" name="email" id="email" class="form-control mb-3" placeholder="البريد الإلكتروني" required>
+      <textarea name="message" id="message" class="form-control mb-3" placeholder="رسالة إضافية" rows="3"></textarea>
+
+      <input type="hidden" name="order" id="order">
+      <input type="hidden" name="total" id="total">
+
+      <div class="product-btn">
+        <button type="submit" class="btn btn-success mt-4">إتمام الشراء ✅</button>
+        <a href="https://wa.me/212123456789?text=أريد%20التواصل%20بخصوص%20طلباتي" target="_blank" class="btn btn-whatsapp mt-4">رسالة على واتساب 📱</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="order.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

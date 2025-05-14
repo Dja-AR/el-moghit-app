@@ -1,0 +1,173 @@
+body {
+  font-family: 'Tajawal', sans-serif;
+  padding-top: 100px;
+}
+
+/* الشعار */
+.logo-text {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #0d6efd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+}
+
+/* شريط التنقل */
+.navbar {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* زر البدء الآن */
+.btn-start-now {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  font-size: 24px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+.btn-start-now:hover {
+  transform: scale(1.1);
+}
+
+/* كارت المعلومات */
+.info-card {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  padding: 15px;
+  text-align: center;
+}
+.info-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* بطاقة المنتج */
+.product-card {
+  transition: 0.3s;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.product-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* أيقونة السلة */
+.cart-icon {
+  position: relative;
+  font-size: 24px;
+}
+#cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* محتوى الأدمن */
+#adminContent {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  display: none;
+}
+
+/* أقسام */
+.section {
+  padding: 100px 20px;
+  background-color: #f8f9fa;
+}
+@media (max-width: 767px) {
+  .marquee { font-size: 14px; }
+  .product-btn {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-btn .btn,
+  .btn-whatsapp {
+    width: 100%;
+    margin-bottom: 10px;
+  }  }
+  /* الشاشات الصغيرة جداً - الهواتف أقل من 576px */
+@media (max-width: 575.98px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .logo-text {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .btn-start-now {
+    font-size: 18px;
+    padding: 10px 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .info-card, .product-card {
+    padding: 10px;
+  }
+
+  .section {
+    padding: 60px 10px;
+  }
+}
+
+/* الشاشات المتوسطة - من 576px إلى 767px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .logo-text {
+    font-size: 1.5rem;
+  }
+
+  .btn-start-now {
+    font-size: 20px;
+    padding: 12px 24px;
+    bottom: 25px;
+    right: 25px;
+  }
+
+  .info-card, .product-card {
+    padding: 12px;
+  }
+
+  .section {
+    padding: 80px 15px;
+  }
+}
+
+/* الشاشات اللوحية - من 768px إلى 991px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .logo-text {
+    font-size: 1.6rem;
+  }
+
+  .section {
+    padding: 90px 20px;
+  }
+}
+
+/* الشاشات الكبيرة - من 992px وأعلى */
+@media (min-width: 992px) {
+  .logo-text {
+    font-size: 1.8rem;
+  }
+
+  .section {
+    padding: 100px 20px;
+  }
+}

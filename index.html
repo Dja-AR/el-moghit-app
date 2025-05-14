@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El-moghit</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body>
+
+<!-- شريط التنقل -->
+<nav class="navbar navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand logo-text" href="#">El moghit</a>
+    </div>
+</nav>
+
+<!-- المحتوى الرئيسي -->
+<section class="section text-center" data-aos="fade-up">
+    <div class="container">
+        <h2 class="mb-4">برامج مخصصة لتلبية احتياجاتك</h2>
+        <p class="lead">سواء كنت تبحث عن برامج غذائية مخصصة أو نصائح رياضية احترافية...</p>
+        <img src="your-image-1.jpg" alt="صورة البرامج" class="img-fluid rounded shadow mt-4">
+    </div>
+</section>
+
+<section class="section text-center bg-white" data-aos="fade-up">
+    <div class="container">
+        <h2 class="mb-4">خدماتنا</h2>
+        <div class="row mt-5">
+            <div class="col-md-6 mb-4">
+                <h4 class="mt-3">شبكة خبراء الكوتشينج (ICF)</h4>
+                <p>احصل على كوتشينج احترافي مع خبراء معتمدين.</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h4 class="mt-3">برنامج الكوتشينج والإرشاد</h4>
+                <p>استفد من أدواتنا لإطلاق برامج إرشاد ونمو وظيفي.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section text-center" data-aos="fade-up">
+    <div class="container">
+        <h2 class="mb-4">منصة واحدة لإدارة برامج الكوتشينج والإرشاد</h2>
+        <p class="lead">تقدّم Knack حلاً متكاملاً لتسريع التطور الوظيفي عبر الكوتشينج الفعال.</p>
+        <img src="your-image-4.jpg" alt="منصة الإدارة" class="img-fluid rounded shadow mt-4">
+    </div>
+</section>
+
+<section class="section bg-dark text-white py-5" id="about" data-aos="fade-up">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                <img src="path-to-your-image.jpg" alt="صورتي" class="rounded-circle img-fluid mb-3" style="width: 180px; height: 180px; object-fit: cover;">
+                <h2 class="mb-3">مرحبًا بك في منصة <span class="text-primary">El Moghit</span></h2>
+                <p class="lead">أنا [اسمك]، مدرب محترف ومختص في الكوتشينج والتوجيه.</p>
+            </div>
+            <div class="col-lg-6 text-center text-lg-start">
+                <h4 class="mb-3">تواصل معنا</h4>
+                <div class="d-flex justify-content-center justify-content-lg-start mb-4">
+                    <a href="#" class="text-white me-3 fs-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white me-3 fs-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white me-3 fs-3"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white me-3 fs-3"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="text-white me-3 fs-3"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p class="lead mb-3">📞 رقم الهاتف: <strong>+213 6XX XXX XXX</strong></p>
+                <a href="#contact" class="btn btn-primary btn-lg">اتصل بنا</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- زر ابدأ الآن -->
+<button id="startNowBtn" class="btn-start-now">ابدأ الآن</button>
+
+<script>
+document.getElementById('startNowBtn').addEventListener('click', function() {
+    // توجيه المستخدم إلى page2.html عند النقر على الزر
+    window.location.href = 'home.html';  // تغيير الرابط إلى صفحة 2
+});
+</script>
+
+<!-- محتوى صفحة الإدارة -->
+<div id="adminContent"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+// تفعيل مكتبة AOS
+AOS.init();
+
+// إظهار الزر عند التمرير
+const startNowBtn = document.getElementById('startNowBtn');
+window.addEventListener('scroll', () => {
+    if (window.scrollY + window.innerHeight >= document.body.scrollHeight - 100) {
+        startNowBtn.style.display = 'block';
+    } else {
+        startNowBtn.style.display = 'none';
+    }
+});
+
+// تحميل admin.html داخل adminContent
+document.getElementById('startNowBtn').addEventListener('click', function() {
+    fetch('home.html')
+    .then(response => response.text())
+    .then(data => {
+        var tempDiv = document.createElement('div');
+        tempDiv.innerHTML = data;
+        var adminBody = tempDiv.querySelector('body');
+        var content = adminBody ? adminBody.innerHTML : tempDiv.innerHTML;
+
+        // وضع المحتوى داخل #adminContent
+        var adminContentDiv = document.getElementById('adminContent');
+        adminContentDiv.innerHTML = content;
+        adminContentDiv.style.display = 'block';
+
+        // إخفاء باقي الصفحة
+        document.querySelectorAll('section, nav, #startNowBtn').forEach(el => el.style.display = 'none');
+    })
+    .catch(error => {
+        console.error('حدث خطأ أثناء تحميل admin.html:', error);
+    });
+});
+</script>
+
+</body>
+</html>
