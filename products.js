@@ -1,7 +1,7 @@
 // قائمة المنتجات
 const products = [
-  { id: 1, name: "منتج 1", price: 1000, image: ".jpg", description: "وصف مفصل للمنتج 1" },
-  { id: 2, name: "منتج 2", price: 1500, image: ".jpg", description: "وصف مفصل للمنتج 2" },
+  { id: 1, name: "منتج 1", price: 1000, image: "images/.jpg", description: "وصف مفصل للمنتج 1" },
+  { id: 2, name: "منتج 2", price: 1500, image: "images/.jpg", description: "وصف مفصل للمنتج 2" },
   { id: 3, name: "منتج 3", price: 2000, image: "img/product3.jpg", description: "وصف مفصل للمنتج 3" },
 ];
 
